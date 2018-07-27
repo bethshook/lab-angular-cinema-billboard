@@ -1,9 +1,25 @@
 <div id="movie-wrap">
+<h3>Room {{movie.room}}: {{movie.title}}</h3>
 
-  <p>detail works! this is the detail for id {{id}}</p>
-
-  <img src="{{movie.poster}}" height="300">
-  <p>{{movie.title}} ({{movie.year}})</p>
-
-Go back
+<div class="single-wrap">
+  <img src="{{movie.poster}}" height="400">
+  <div class="info">
+  <p><b>Genres:</b></p>
+  <ul>
+    <li *ngFor="let genre of movie.genres">{{genre}}</li>
+  </ul>
+  <p><b>Year:</b> {{movie.year}}</p>
+  <p><b>Director:</b> {{movie.director}}</p>
+  <p><b>Actors:</b></p>
+  <ul>
+      <li *ngFor="let actor of movie.actors">{{actor}}</li>
+    </ul>
+    <p><b>Schedule:</b></p>
+  <ul>
+      <li *ngFor="let time of movie.hours">{{time}}</li>
+    </ul>
+    <p><b>Synopsis:</b> {{movie.synopsis}}</p>
+  </div>
+</div>
     </div>
+    <p class="return"><a [routerLink]="['/home']">Go back</a></p>

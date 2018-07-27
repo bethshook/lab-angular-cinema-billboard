@@ -115,7 +115,7 @@ export class MovieListService {
   }
 
   getMovie(id){
-    this.movies.find(movie => movie.id == id)
+    return this.movies.find(movie => movie.id == id)
   }
   
 }

@@ -12,12 +12,14 @@ export class MyMovieComponent implements OnInit {
 
   constructor(private router:Router, private route:ActivatedRoute, private service:MovieListService) { }
 
+  id: any
   movie: any
 
   ngOnInit() {
     this.route.params
     .subscribe(params => {
-      this.movie = this.service.getMovie(params.id)
+      this.id = params.id
+      this.movie = this.service.getMovie(this.id)
     })
   }
 

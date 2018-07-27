@@ -1,6 +1,6 @@
 
 <h1>Ironhack Cinema</h1>
-<div id="movie-wrap">
+<div id="movies-wrap">
     <div *ngFor="let movie of movies" class="movie-box">
             <p><b>ROOM {{movie.room}}</b></p>
         <a [routerLink]="['/movie', movie.id]">

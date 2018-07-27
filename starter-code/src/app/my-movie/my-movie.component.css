@@ -1,0 +1,27 @@
+#movie-wrap {
+    width: 50%;
+    margin: 0 auto;
+    font-family: Avenir, sans-serif;
+    margin-top: 50px;
+}
+
+.single-wrap {
+    display:flex;
+}
+
+img{
+    margin-right: 40px;
+}
+
+.return {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    font-family: Avenir, sans-serif;
+}
+
+.single-wrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
