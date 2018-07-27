@@ -1,3 +1,11 @@
-<p>
-  my-home works!
-</p>
+
+<h1>Ironhack Cinema</h1>
+<div id="movie-wrap">
+    <div *ngFor="let movie of movies" class="movie-box">
+            <p><b>ROOM {{movie.room}}</b></p>
+        <a [routerLink]="['/movie', movie.id]">
+                <img src="{{movie.poster}}" height="300px">
+                <p>{{movie.title}} ({{movie.year}})</p></a>
+
+    </div>
+    </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {MovieListService} from '../movie-list.service'
 
 
 @Component({
@@ -9,9 +10,12 @@ import {Router} from '@angular/router';
 })
 export class MyHomeComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private service:MovieListService) { }
+
+  movies = []
 
   ngOnInit() {
+    this.movies = this.service.getMovies();
   }
 
 }

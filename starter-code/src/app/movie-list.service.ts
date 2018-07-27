@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class MovieListService {
 
   movies = [
@@ -25,7 +23,7 @@ export class MovieListService {
           "Gil Bellows"
         ],
         hours: ['Wednesday, 19:30', 'Wednesday, 22:30'],
-        room: 5
+        room: 1
       }, {
         id: 2,
         title: "The Godfather",
@@ -45,7 +43,7 @@ export class MovieListService {
           "Sterling Hayden"
         ],
         hours: ['Thursday, 15:30', 'Tuesday, 20:00'],
-        room: 4
+        room: 2
       }, {
         id: 3,
         title: "The Godfather Part II",
@@ -85,7 +83,7 @@ export class MovieListService {
           "Gary Oldman"
         ],
         hours: ['Saturday, 19:30', 'Saturday, 12:00'],
-        room: 2
+        room: 4
       },
       {
         id: 5,
@@ -106,21 +104,18 @@ export class MovieListService {
           "Embeth Davidtz"
         ],
         hours: ['Thursday, 19:30', 'Monday, 18:00'],
-        room: 1
+        room: 5
       }
     ]
 
-    getMovies(){
-      return this.movies;
-    }
-
-    getMovie(id){
-      this.movies.forEach(function(movie){
-        if (movie.id===id) {
-          return movie
-        }
-      })
-    }
-
   constructor() { }
+
+  getMovies(){
+    return this.movies;
+  }
+
+  getMovie(id){
+    this.movies.find(movie => movie.id == id)
+  }
+  
 }
